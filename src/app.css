@@ -1,0 +1,113 @@
+body {
+  background-color: rgb(245, 245, 245);
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.todo-item [type="checkbox"]:checked + span {
+  text-decoration: line-through;
+}
+
+h1 {
+  font-size: 100px;
+  font-weight: 100;
+  color: rgba(175, 47, 47, 0.733);
+  margin: 0;
+  text-align: center;
+}
+
+.box {
+  width: 550px;
+  max-width: 100%;
+  margin: 20px auto;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 50px 0 rgba(0, 0, 0, 0.1);
+  background-color: white;
+}
+
+form {
+  position: relative;
+  border-bottom: 1px solid #ededed;
+}
+
+form input {
+  padding: 16px 16px 16px 60px;
+  border: none;
+  width: 100%;
+  font-size: 24px;
+  box-sizing: border-box;
+  outline: none;
+}
+
+.main {
+  position: relative;
+  z-index: 2;
+  border-top: 1px solid #e6e6e6;
+}
+
+.todo-item input {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  appearance: none;
+  outline: none;
+}
+
+.todo-item input:checked {
+  background-image: none;
+
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgdmlld0JveD0iMCAwIDQwIDQwIj48Y2lyY2xlIGN4PSIyMCIgY3k9IjIwIiByPSIxOCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjNWQwMGYzIiBzdHJva2Utd2lkdGg9IjMiLz48cGF0aCBmaWxsPSIjNWQwMGYzIiBkPSJNMTQgMjEuMzNsLTMuNS0zLjVMOC4xIDE5bDQuOSA0LjkgMTIuMS0xMi4xLTIuMS0yLjJ6Ii8+PC9zdmc+);
+}
+
+.todo-item span {
+  flex: 1;
+  font-size: 24px;
+  word-break: break-all;
+}
+
+.todo-item button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: none;
+  font-size: 30px;
+  color: #cc9a9a;
+  margin: 0 10px;
+  transition: color 0.2s ease-out;
+}
+
+.todo-item button:hover {
+  color: #af5b5e;
+}
+
+.item {
+  float: left;
+  text-align: left;
+  font-size: 14px;
+  color: #777;
+  margin-top: 15px;
+  margin-left: 10px;
+}
+
+.All,
+.Active,
+.Completed,
+.Clear {
+  margin: 10px;
+  padding: 3px 7px;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.Clear {
+  float: right;
+  color: #777;
+}
+
+.Clear:hover {
+  text-decoration: underline;
+}
